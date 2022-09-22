@@ -7,6 +7,9 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
 
     <div class="body d-flex justify-content-between">
         <h4>LIST MOVIE</h4>
+        <h2>
+            <a href="../page/addMoviePage.php?" style="color: red;" class="fa fa-plus-square"></a>
+        </h2>
     </div>
     <hr>
         <table class="table">
@@ -17,7 +20,6 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
                 <th scope="col">Genre</th>
                 <th scope="col">Realese</th>
                 <th scope="col">Season</th>
-                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -38,10 +40,15 @@ die(mysqli_error($con));
                 <td>'.$data['realese'].'</td>
                 <td>'.$data['season'].'</td>
                 <td>
+                    <a href="../page/editMoviePage.php?id='.$data['id'].'"
+onClick="return alert ( \'Are you sure want to edit this
+data?\')">                        <i style="color: green" class="fa fa-edit fa-2x"></i>
+                    </a>
                     <a href="../process/deleteMovieProcess.php?id='.$data['id'].'"
 onClick="return confirm ( \'Are you sure want to delete this
 data?\')">                        <i style="color: red" class="fa fa-trash fa-2x"></i>
                     </a>
+                    
                 </td>
             </tr>';
             $no++;
@@ -55,6 +62,6 @@ data?\')">                        <i style="color: red" class="fa fa-trash fa-2x
 <script>
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-crossorigin="anonymous"></script>
+crossorigin="anonymous"</script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     // $_POST itu method di formnya
     if(isset($_POST['login'])){
 
-        include('../db.php'); // untuk mengoneksikan dengan databas dengan memanggil file db.php
+        include('../db.php'); // untuk mengoneksikan dengan database dengan memanggil file db.php
         //tampung nilai yang ada di from ke variable
         // sesuaikan variabel name yang ada di registerPage.php disetiap input
         $email = $_POST['email'];
